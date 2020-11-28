@@ -12,11 +12,11 @@ public class Sistema {
 		VueloView view4 = new VueloView();
 		MaletaView view5 = new MaletaView();
 
-		mainFrame.getContentPane().add(view,BorderLayout.WEST);
-		mainFrame.getContentPane().add(view2,BorderLayout.EAST);
-		mainFrame.getContentPane().add(view3,BorderLayout.CENTER);
+		mainFrame.getContentPane().add(view, BorderLayout.WEST);
+		mainFrame.getContentPane().add(view2, BorderLayout.EAST);
+		mainFrame.getContentPane().add(view3, BorderLayout.CENTER);
 		mainFrame.getContentPane().add(view4, BorderLayout.SOUTH);
-		mainFrame.getContentPane().add(view5,BorderLayout.NORTH);
+		mainFrame.getContentPane().add(view5, BorderLayout.NORTH);
 		mainFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		mainFrame.setVisible(true);
 		mainFrame.pack();
