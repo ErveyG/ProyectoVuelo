@@ -1,7 +1,9 @@
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
+import java.nio.ByteOrder;
 
-public class MenuView extends javax.swing.JFrame {
+public class MenuView extends JFrame {
 
     public MenuView() {
         initComponents();
@@ -9,8 +11,8 @@ public class MenuView extends javax.swing.JFrame {
 
     private void initComponents() {
 
-        jMenuItem4 = new javax.swing.JMenuItem();
-        fondoLabel = new javax.swing.JLabel();
+        jMenuItem4 = new JMenuItem();
+        fondoLabel = new JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         fileMenu = new javax.swing.JMenu();
         salirMenuItem = new javax.swing.JMenuItem();
@@ -97,38 +99,12 @@ public class MenuView extends javax.swing.JFrame {
     }
 
     private void boletoInternacionalMenuItemActionPerformed(java.awt.event.ActionEvent evt) {
-        JFrame mainFrame = new JFrame();
-        mainFrame.setLayout(new BorderLayout());
-        DocumentacionInternacionalView view = new DocumentacionInternacionalView();
-        DocumentacionNacionalView view2 = new DocumentacionNacionalView();
-        PasajeroView view3 = new PasajeroView();
-        VueloView view4 = new VueloView();
-        MaletaView view5 = new MaletaView();
-
-        mainFrame.getContentPane().add(view, BorderLayout.WEST);
-        mainFrame.getContentPane().add(view2, BorderLayout.EAST);
-        mainFrame.getContentPane().add(view3, BorderLayout.CENTER);
-        mainFrame.getContentPane().add(view4, BorderLayout.SOUTH);
-        mainFrame.getContentPane().add(view5, BorderLayout.NORTH);
-        mainFrame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        mainFrame.setVisible(true);
-        mainFrame.pack();
+        RegistroInternacionalView registroInternacionalView = new RegistroInternacionalView();
     }
 
     private void boletoNacionalMenuItemActionPerformed(java.awt.event.ActionEvent evt) {
-        JFrame mainFrame = new JFrame();
-        mainFrame.setLayout(new BorderLayout());
-        DocumentacionNacionalView view2 = new DocumentacionNacionalView();
-        PasajeroView view3 = new PasajeroView();
-        VueloView view4 = new VueloView();
-
-
-        mainFrame.getContentPane().add(view2, BorderLayout.EAST);
-        mainFrame.getContentPane().add(view3, BorderLayout.CENTER);
-        mainFrame.getContentPane().add(view4, BorderLayout.SOUTH);
-        mainFrame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        mainFrame.setVisible(true);
-        mainFrame.pack();
+        RegistroNacionalView registroNacionalView = new RegistroNacionalView();
+        RegistroNacionalController registroNacionalController = new RegistroNacionalController(registroNacionalView);
     }
 
     private void imprimirBoletoMenuItemActionPerformed(java.awt.event.ActionEvent evt) {
@@ -184,5 +160,4 @@ public class MenuView extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenu registrarBoletoMenu;
     private javax.swing.JMenuItem salirMenuItem;
-    // End of variables declaration
 }

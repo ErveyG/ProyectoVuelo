@@ -32,7 +32,7 @@ public class DocumentacionInternacionalView extends JPanel {
 
 	public DocumentacionInternacionalView(){
 		this.setLayout(new GridBagLayout());
-
+		this.setBackground(Color.decode("#1da5f1"));
 		tipoVisaComboBox.setModel(new DefaultComboBoxModel<>(
 				new String[] { "TURISTA", "TRABAJO", "ATENCION_MEDICA" }));
 

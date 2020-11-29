@@ -43,9 +43,10 @@ public class VueloView extends JPanel {
 
 	public VueloView() {
 		this.setLayout(new GridBagLayout());
+		this.setBackground(Color.decode("#2299f0"));
 
 		GridBagConstraints constraints = new GridBagConstraints();
-		constraints.insets = new Insets(10, 10, 10, 10);
+		constraints.insets = new Insets(5, 5, 5, 5);
 
 		constraints.gridx = 0;
 		constraints.gridy = 0;

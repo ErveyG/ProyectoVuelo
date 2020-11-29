@@ -36,6 +36,7 @@ public class PasajeroView extends JPanel {
 
 	public PasajeroView() {
 		this.setLayout(new GridBagLayout());
+		this.setBackground(Color.decode("#2299f0"));
 
 		claseVueloComboBox.setModel(new DefaultComboBoxModel<>(
 				new String[] { "TURISTA", "PRIMERA_CLASE", "EJECUTIVO" }));
