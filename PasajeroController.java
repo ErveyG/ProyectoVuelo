@@ -9,6 +9,18 @@ public class PasajeroController {
 				vista.getSexoEntrada());
 	}
 
+	public Pasajero creaPasajero(EnumClase claseVuelo,
+								 Documentacion documentacion,
+								 int edad,
+								 String nombre,
+								 String sexo){
+		return new Pasajero(claseVuelo,
+				documentacion,
+				edad,
+				nombre,
+				sexo);
+	}
+
 	public void mostrarVista() throws Exception {
 		this.vista = new PasajeroView();
 	}

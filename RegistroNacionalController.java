@@ -28,15 +28,19 @@ public class RegistroNacionalController {
                         registroNacionalView.getVueloView().getDestinoVueloEntrada(),
                         registroNacionalView.getVueloView().getNumAsientoVueloEntrada(),
                         registroNacionalView.getVueloView().getNumeroVueloEntrada(),
-                        registroNacionalView.getVueloView().getTipoVueloEntrada());
+                        EnumVuelo.NACIONAL); //registroNacionalView.getVueloView().getTipoVueloEntrada());
 
                 documentacion = documentacionController.creaDocumentacion(registroNacionalView);
 
-                pasajero = pasajeroController.creaPasajero(documentacion);
+                pasajero = pasajeroController.creaPasajero(registroNacionalView.getPasajeroView().getClaseEntrada(),
+                                                            documentacion,
+                                                            registroNacionalView.getPasajeroView().getEdadEntrada(),
+                                                            registroNacionalView.getPasajeroView().getNombreEntrada(),
+                                                            registroNacionalView.getPasajeroView().getSexoEntrada());
 
                 boleto = new Boleto(pasajero,vuelo);
 
-                JOptionPane.showMessageDialog(null,"success");
+                JOptionPane.showMessageDialog(null,boleto.toString());
 
             }
             catch (Exception e){

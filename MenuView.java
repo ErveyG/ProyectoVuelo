@@ -100,14 +100,18 @@ public class MenuView extends JFrame {
 
     private void boletoInternacionalMenuItemActionPerformed(java.awt.event.ActionEvent evt) {
         RegistroInternacionalView registroInternacionalView = new RegistroInternacionalView();
+        RegistroInternacionalController registroInternacionalController =
+                new RegistroInternacionalController(registroInternacionalView);
     }
 
     private void boletoNacionalMenuItemActionPerformed(java.awt.event.ActionEvent evt) {
         RegistroNacionalView registroNacionalView = new RegistroNacionalView();
-        RegistroNacionalController registroNacionalController = new RegistroNacionalController(registroNacionalView);
+        RegistroNacionalController registroNacionalController =
+                new RegistroNacionalController(registroNacionalView);
     }
 
     private void imprimirBoletoMenuItemActionPerformed(java.awt.event.ActionEvent evt) {
+        JOptionPane.showMessageDialog(null,"Not available yet.");
     }
 
     private void registrarBoletoMenuActionPerformed(java.awt.event.ActionEvent evt) {

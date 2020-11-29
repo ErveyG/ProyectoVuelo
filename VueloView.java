@@ -15,11 +15,11 @@ public class VueloView extends JPanel {
 	private JTextField tipoVueloTextField = new JTextField(20);
 
 	//inicializo para ejemplificar
-	public String aerolineaVueloEntrada = "";
-	public String destinoVueloEntrada = "";
+	public String aerolineaVueloEntrada = "Aerolinea";
+	public String destinoVueloEntrada = "Destino";
 	public int numAsientoVueloEntrada = 0;
 	public int numeroVueloEntrada = 0;
-	public EnumVuelo tipoVueloEntrada = EnumVuelo.INTERNACIONAL;
+	public EnumVuelo tipoVueloEntrada;
 
 	public String getAerolineaVueloEntrada() {
 		return aerolineaVueloEntrada;

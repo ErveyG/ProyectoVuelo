@@ -15,7 +15,7 @@ public class PasajeroView extends JPanel {
 	//inicializo para ejemplificar
 	private EnumClase claseEntrada = EnumClase.TURISTA;
 	private int edadEntrada = 0;
-	private String nombreEntrada = "";
+	private String nombreEntrada = "Name";
 	private String sexoEntrada = "Masculino";
 
 	public EnumClase getClaseEntrada(){
