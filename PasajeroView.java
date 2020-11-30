@@ -9,29 +9,29 @@ public class PasajeroView extends JPanel {
 	private JLabel claseVueloLabel = new JLabel("Clase de Vuelo: ");
 	private JTextField nombreTextField = new JTextField(20);
 	private JTextField edadTextField = new JTextField(20);
-	private JTextField sexoTextField = new JTextField(20);//cambiar a radioButton
+	private JTextField sexoTextField = new JTextField(20);//cambiar a radioButton?
 	private JComboBox<String> claseVueloComboBox = new JComboBox<>();
 
 	//inicializo para ejemplificar
-	private EnumClase claseEntrada = EnumClase.TURISTA;
-	private int edadEntrada = 0;
-	private String nombreEntrada = "Name";
-	private String sexoEntrada = "Masculino";
+	private EnumClase claseEntrada;
+	private int edadEntrada;
+	private String nombreEntrada;
+	private String sexoEntrada;
 
 	public EnumClase getClaseEntrada(){
-		return claseEntrada;
+		return claseEntrada = EnumClase.valueOf((String)claseVueloComboBox.getSelectedItem());
 	}
 
 	public int getEdadEntrada(){
-		return edadEntrada;
+		return edadEntrada = Integer.parseInt(edadTextField.getText());
 	}
 
 	public String getNombreEntrada(){
-		return nombreEntrada;
+		return nombreEntrada = nombreTextField.getText();
 	}
 
 	public String getSexoEntrada(){
-		return sexoEntrada;
+		return sexoEntrada = sexoTextField.getText();
 	}
 
 	public PasajeroView() {

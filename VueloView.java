@@ -14,31 +14,30 @@ public class VueloView extends JPanel {
 	private JTextField numVueloTextField = new JTextField(20);
 	private JTextField tipoVueloTextField = new JTextField(20);
 
-	//inicializo para ejemplificar
-	public String aerolineaVueloEntrada = "Aerolinea";
-	public String destinoVueloEntrada = "Destino";
-	public int numAsientoVueloEntrada = 0;
-	public int numeroVueloEntrada = 0;
+	public String aerolineaVueloEntrada;
+	public String destinoVueloEntrada;
+	public int numAsientoVueloEntrada;
+	public int numeroVueloEntrada;
 	public EnumVuelo tipoVueloEntrada;
 
 	public String getAerolineaVueloEntrada() {
-		return aerolineaVueloEntrada;
+		return aerolineaVueloEntrada = aerolineaTextField.getText();
 	}
 
 	public String getDestinoVueloEntrada(){
-		return aerolineaVueloEntrada;
+		return destinoVueloEntrada = destinoTextField.getText();
 	}
 
 	public int getNumAsientoVueloEntrada() {
-		return numAsientoVueloEntrada;
+		return numAsientoVueloEntrada = Integer.parseInt(numAsientoTextField.getText());
 	}
 
 	public int getNumeroVueloEntrada() {
-		return numeroVueloEntrada;
+		return numeroVueloEntrada = Integer.parseInt(numVueloTextField.getText());
 	}
 
 	public EnumVuelo getTipoVueloEntrada() {
-		return tipoVueloEntrada;
+		return tipoVueloEntrada = EnumVuelo.valueOf(tipoVueloTextField.getText());
 	}
 
 	public VueloView() {
@@ -78,10 +77,10 @@ public class VueloView extends JPanel {
 
 		constraints.gridx = 0;
 		constraints.gridy = 4;
-		this.add(tipoVueloLabel,constraints);
+		//this.add(tipoVueloLabel,constraints);
 
 		constraints.gridx = 1;
-		this.add(tipoVueloTextField,constraints);
+		//this.add(tipoVueloTextField,constraints);
 
 		this.setBorder(BorderFactory.createTitledBorder(
 				BorderFactory.createEtchedBorder(), "VueloView"));

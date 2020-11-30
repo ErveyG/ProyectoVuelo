@@ -43,6 +43,11 @@ public class RegistroNacionalController {
                 JOptionPane.showMessageDialog(null,boleto.toString());
 
             }
+            catch (NumberFormatException e1){
+                System.out.println(e1);
+                registroNacionalView.mostrarError("Por favor ingrese datos antes" +
+                        " de enviar.");
+            }
             catch (Exception e){
                 System.out.println(e);
                 registroNacionalView.mostrarError("Algún error ocurrió...");

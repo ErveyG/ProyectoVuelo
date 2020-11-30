@@ -12,21 +12,20 @@ public class DocumentacionInternacionalView extends JPanel {
 	private JComboBox<String> tipoVisaComboBox = new JComboBox<>();
 	private JTextField vigenciaTextField = new JTextField(20);
 
-	//los inicializo para ejemplificar en el main sin ActionListener o Events
-	private int numPasaporteEntrada = 0;
-	private EnumVisa visaEntrada = EnumVisa.TURISTA;
-	private int vigenciaEntrada = 0;
+	private int numPasaporteEntrada;
+	private EnumVisa visaEntrada;
+	private int vigenciaEntrada;
 
 	public int getVigenciaEntrada() {
-		return vigenciaEntrada;
+		return vigenciaEntrada = Integer.parseInt(vigenciaTextField.getText()) ;
 	}
 
 	public EnumVisa getVisaEntrada() {
-		return visaEntrada;
+		return visaEntrada = EnumVisa.valueOf((String)tipoVisaComboBox.getSelectedItem());
 	}
 
 	public int getNumPasaporteEntrada(){
-		return numPasaporteEntrada;
+		return numPasaporteEntrada = Integer.parseInt(numPasaporteTextField.getText());
 	}
 
 

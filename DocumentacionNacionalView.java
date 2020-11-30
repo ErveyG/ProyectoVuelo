@@ -6,10 +6,10 @@ public class DocumentacionNacionalView extends JPanel{
 	private JLabel curpLabel = new JLabel("Ingresa CURP: ");
 	private JTextField curpField = new JTextField(20);
 
-	private String curpEntrada = "ABCD1234";
+	private String curpEntrada;
 
 	public String getCurpEntrada() {
-		return curpEntrada;
+		return curpEntrada = curpField.getText();
 	}
 
 	public DocumentacionNacionalView() {
