@@ -21,7 +21,7 @@ public class MenuView extends JFrame {
         registrarBoletoMenu = new javax.swing.JMenu();
         boletoInternacionalMenuItem = new javax.swing.JMenuItem();
         boletoNacionalMenuItem = new javax.swing.JMenuItem();
-
+        this.setResizable(false);
         jMenuItem4.setText("jMenuItem4");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);

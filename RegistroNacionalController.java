@@ -41,7 +41,7 @@ public class RegistroNacionalController {
                 boleto = new Boleto(pasajero,vuelo);
 
                 JOptionPane.showMessageDialog(null,boleto.toString());
-
+                //crear una excepcion para boton Cancelar boleto
             }
             catch (NumberFormatException e1){
                 System.out.println(e1);

@@ -8,6 +8,7 @@ public class RegistroInternacionalView {
     PasajeroView pasajeroView = new PasajeroView();
     VueloView vueloView = new VueloView();
     JButton enviarBoton = new JButton("Enviar");
+    JButton cancelarBoton = new JButton("Cancelar Boleto");
 
     public DocumentacionInternacionalView getDocInternacionalView() {
         return docInternacionalView;
@@ -25,16 +26,25 @@ public class RegistroInternacionalView {
         mainFrame = new JFrame();
         mainFrame.setLayout(new BorderLayout());
 
-        docInternacionalView.setOpaque(true);
+        //hacer panel en clase reutilizable?
+        JPanel panelBoton = new JPanel(new GridBagLayout());
+        GridBagConstraints constraints = new GridBagConstraints();
+        constraints.insets = new Insets(10, 10, 10, 10);
+        constraints.gridx = 0;
+        constraints.gridy = 0;
+        constraints.anchor = GridBagConstraints.CENTER;
+        panelBoton.add(enviarBoton,constraints);
+        constraints.gridy = 1;
+        panelBoton.add(cancelarBoton,constraints);
+        panelBoton.setBackground(Color.decode("#1da5f1"));
 
         JPanel panelEast = new JPanel(new GridLayout(2,1));
-        panelEast.add(vueloView);
         panelEast.add(pasajeroView);
+        panelEast.add(panelBoton);
 
         JPanel panelCenter = new JPanel(new GridLayout(2,1));
-        panelEast.add(docInternacionalView);
-        enviarBoton.setHorizontalAlignment(JButton.CENTER);
-        panelEast.add(enviarBoton);
+        panelCenter.add(vueloView);
+        panelCenter.add(docInternacionalView);
 
         JLabel backgroundLabel = new JLabel(new ImageIcon("Images/RegistrationLoginPic.png"));
 
