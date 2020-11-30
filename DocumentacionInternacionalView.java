@@ -31,7 +31,7 @@ public class DocumentacionInternacionalView extends JPanel {
 
 	public DocumentacionInternacionalView(){
 		this.setLayout(new GridBagLayout());
-		this.setBackground(Color.decode("#1da5f1"));
+		this.setBackground(Color.decode("#2299f0"));
 		tipoVisaComboBox.setModel(new DefaultComboBoxModel<>(
 				new String[] { "TURISTA", "TRABAJO", "ATENCION_MEDICA" }));
 
@@ -47,17 +47,17 @@ public class DocumentacionInternacionalView extends JPanel {
 
 		constraints.gridx = 0;
 		constraints.gridy = 1;
-		this.add(tipoVisaLabel,constraints);
-
-		constraints.gridx = 1;
-		this.add(tipoVisaComboBox,constraints);
-
-		constraints.gridx = 0;
-		constraints.gridy = 2;
 		this.add(vigenciaLabel,constraints);
 
 		constraints.gridx = 1;
 		this.add(vigenciaTextField,constraints);
+
+		constraints.gridx = 0;
+		constraints.gridy = 2;
+		this.add(tipoVisaLabel,constraints);
+
+		constraints.gridx = 1;
+		this.add(tipoVisaComboBox,constraints);
 
 		this.setBorder(BorderFactory.createTitledBorder(
 				BorderFactory.createEtchedBorder(), "DocumentacionInternacionalView"));

@@ -14,8 +14,7 @@ public class DocumentacionNacionalView extends JPanel{
 
 	public DocumentacionNacionalView() {
 		this.setLayout(new GridBagLayout());
-		this.setBackground(Color.decode("#1da5f1"));
-		this.setOpaque(false);
+		this.setBackground(Color.decode("#2299f0"));
 
 		GridBagConstraints constraints = new GridBagConstraints();
 		constraints.insets = new Insets(10, 10, 10, 10);

@@ -36,7 +36,7 @@ public class RegistroNacionalView {
         panelBoton.add(enviarBoton,constraints);
         constraints.gridy = 1;
         panelBoton.add(cancelarBoton,constraints);
-        panelBoton.setBackground(Color.decode("#1da5f1"));
+        panelBoton.setBackground(Color.decode("#2299f0"));
 
         JPanel panelEast = new JPanel(new GridLayout(2,1));
         panelEast.add(pasajeroView);
@@ -46,7 +46,7 @@ public class RegistroNacionalView {
         panelCenter.add(vueloView);
         panelCenter.add(docNacionalView);
 
-        JLabel backgroundLabel = new JLabel(new ImageIcon("Images/RegistrationLoginPic.png"));
+        JLabel backgroundLabel = new JLabel(new ImageIcon("Images/RegistrationN1_Parejo_Fondo.png"));
 
         mainFrame.getContentPane().add(panelEast, BorderLayout.EAST);
         mainFrame.getContentPane().add(panelCenter, BorderLayout.CENTER);
