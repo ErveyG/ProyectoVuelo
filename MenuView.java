@@ -1,6 +1,8 @@
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.nio.ByteOrder;
 
 public class MenuView extends JFrame {
@@ -13,27 +15,27 @@ public class MenuView extends JFrame {
 
         jMenuItem4 = new JMenuItem();
         fondoLabel = new JLabel();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        fileMenu = new javax.swing.JMenu();
-        salirMenuItem = new javax.swing.JMenuItem();
-        buscarBoletoMenu = new javax.swing.JMenu();
-        imprimirBoletoMenuItem = new javax.swing.JMenuItem();
-        registrarBoletoMenu = new javax.swing.JMenu();
-        boletoInternacionalMenuItem = new javax.swing.JMenuItem();
-        boletoNacionalMenuItem = new javax.swing.JMenuItem();
+        jMenuBar1 = new JMenuBar();
+        fileMenu = new JMenu();
+        salirMenuItem = new JMenuItem();
+        buscarBoletoMenu = new JMenu();
+        imprimirBoletoMenuItem = new JMenuItem();
+        registrarBoletoMenu = new JMenu();
+        boletoInternacionalMenuItem = new JMenuItem();
+        boletoNacionalMenuItem = new JMenuItem();
         this.setResizable(false);
         jMenuItem4.setText("jMenuItem4");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setTitle("Bienvenido Al Sistema");
 
-        fondoLabel.setIcon(new javax.swing.ImageIcon("Images/RegistrationN3.png")); // NOI18N
+        fondoLabel.setIcon(new javax.swing.ImageIcon("Images/RegistrationN3.png"));
 
         fileMenu.setText("File");
 
         salirMenuItem.setText("Salir");
-        salirMenuItem.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        salirMenuItem.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 salirMenuItemActionPerformed(evt);
             }
         });
@@ -44,7 +46,7 @@ public class MenuView extends JFrame {
         buscarBoletoMenu.setText("Buscar Boleto");
 
         imprimirBoletoMenuItem.setText("Imprimir Boleto");
-        imprimirBoletoMenuItem.addActionListener(new java.awt.event.ActionListener() {
+        imprimirBoletoMenuItem.addActionListener(new ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 imprimirBoletoMenuItemActionPerformed(evt);
             }
@@ -54,23 +56,23 @@ public class MenuView extends JFrame {
         jMenuBar1.add(buscarBoletoMenu);
 
         registrarBoletoMenu.setText("Registrar Boleto");
-        registrarBoletoMenu.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        registrarBoletoMenu.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 registrarBoletoMenuActionPerformed(evt);
             }
         });
 
         boletoInternacionalMenuItem.setText("Internacional");
-        boletoInternacionalMenuItem.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        boletoInternacionalMenuItem.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 boletoInternacionalMenuItemActionPerformed(evt);
             }
         });
         registrarBoletoMenu.add(boletoInternacionalMenuItem);
 
         boletoNacionalMenuItem.setText("Nacional");
-        boletoNacionalMenuItem.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        boletoNacionalMenuItem.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 boletoNacionalMenuItemActionPerformed(evt);
             }
         });
@@ -80,31 +82,31 @@ public class MenuView extends JFrame {
 
         setJMenuBar(jMenuBar1);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        javax.swing.GroupLayout layout = new GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(fondoLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addComponent(fondoLabel, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(fondoLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 509, Short.MAX_VALUE)
+                layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addComponent(fondoLabel, GroupLayout.DEFAULT_SIZE, 509, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>
 
-    private void salirMenuItemActionPerformed(java.awt.event.ActionEvent evt) {
+    private void salirMenuItemActionPerformed(ActionEvent evt) {
         System.exit(0);
     }
 
-    private void boletoInternacionalMenuItemActionPerformed(java.awt.event.ActionEvent evt) {
+    private void boletoInternacionalMenuItemActionPerformed(ActionEvent evt) {
         RegistroInternacionalView registroInternacionalView = new RegistroInternacionalView();
         RegistroInternacionalController registroInternacionalController =
                 new RegistroInternacionalController(registroInternacionalView);
     }
 
-    private void boletoNacionalMenuItemActionPerformed(java.awt.event.ActionEvent evt) {
+    private void boletoNacionalMenuItemActionPerformed(ActionEvent evt) {
         RegistroNacionalView registroNacionalView = new RegistroNacionalView();
         RegistroNacionalController registroNacionalController =
                 new RegistroNacionalController(registroNacionalView);
@@ -118,9 +120,6 @@ public class MenuView extends JFrame {
 
     }
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -154,14 +153,14 @@ public class MenuView extends JFrame {
     }
 
     // Variables declaration - do not modify
-    private javax.swing.JMenuItem boletoInternacionalMenuItem;
-    private javax.swing.JMenuItem boletoNacionalMenuItem;
-    private javax.swing.JMenu buscarBoletoMenu;
-    private javax.swing.JMenu fileMenu;
-    private javax.swing.JLabel fondoLabel;
-    private javax.swing.JMenuItem imprimirBoletoMenuItem;
-    private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenu registrarBoletoMenu;
-    private javax.swing.JMenuItem salirMenuItem;
+    private JMenuItem boletoInternacionalMenuItem;
+    private JMenuItem boletoNacionalMenuItem;
+    private JMenu buscarBoletoMenu;
+    private JMenu fileMenu;
+    private JLabel fondoLabel;
+    private JMenuItem imprimirBoletoMenuItem;
+    private JMenuBar jMenuBar1;
+    private JMenuItem jMenuItem4;
+    private JMenu registrarBoletoMenu;
+    private JMenuItem salirMenuItem;
 }
