@@ -29,5 +29,5 @@ public class MaletaView extends JPanel{
 		this.setBorder(BorderFactory.createTitledBorder(
 				BorderFactory.createEtchedBorder(), "Registrar Maleta"));
 	}
-	
+
 }

@@ -20,6 +20,7 @@ public class MenuView extends JFrame {
         salirMenuItem = new JMenuItem();
         buscarBoletoMenu = new JMenu();
         imprimirBoletoMenuItem = new JMenuItem();
+        cancelarBoletoMenuItem = new JMenuItem();
         registrarBoletoMenu = new JMenu();
         boletoInternacionalMenuItem = new JMenuItem();
         boletoNacionalMenuItem = new JMenuItem();
@@ -46,12 +47,21 @@ public class MenuView extends JFrame {
         buscarBoletoMenu.setText("Buscar Boleto");
 
         imprimirBoletoMenuItem.setText("Imprimir Boleto");
+        cancelarBoletoMenuItem.setText("Cancelar Boleto");
         imprimirBoletoMenuItem.addActionListener(new ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 imprimirBoletoMenuItemActionPerformed(evt);
             }
         });
+
+        cancelarBoletoMenuItem.addActionListener(new ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cancelarBoletoMenuItemActionPerformed(evt);
+            }
+        });
+
         buscarBoletoMenu.add(imprimirBoletoMenuItem);
+        buscarBoletoMenu.add(cancelarBoletoMenuItem);
 
         jMenuBar1.add(buscarBoletoMenu);
 
@@ -116,6 +126,10 @@ public class MenuView extends JFrame {
         JOptionPane.showMessageDialog(null,"Not available yet.");
     }
 
+    private void cancelarBoletoMenuItemActionPerformed(java.awt.event.ActionEvent evt) {
+        JOptionPane.showMessageDialog(null,"Not available yet.");
+    }
+
     private void registrarBoletoMenuActionPerformed(java.awt.event.ActionEvent evt) {
 
     }
@@ -159,6 +173,7 @@ public class MenuView extends JFrame {
     private JMenu fileMenu;
     private JLabel fondoLabel;
     private JMenuItem imprimirBoletoMenuItem;
+    private JMenuItem cancelarBoletoMenuItem;
     private JMenuBar jMenuBar1;
     private JMenuItem jMenuItem4;
     private JMenu registrarBoletoMenu;
