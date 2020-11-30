@@ -18,6 +18,7 @@ public class RegistroInternacionalController {
     public RegistroInternacionalController(RegistroInternacionalView registroInternacionalView){
         this.registroInternacionalView = registroInternacionalView;
         this.registroInternacionalView.addEnviarBoton(new EnviarListener());
+	this.registroInternacionalView.addCancelarBtn (new CancelarBtnListener ());
     }
 
     class EnviarListener implements ActionListener{
@@ -53,5 +54,13 @@ public class RegistroInternacionalController {
                 registroInternacionalView.mostrarError("Algún error ocurrió...");
             }
         }
+    }
+
+    class CancelarBtnListener implements ActionListener {
+	@Override
+	public void actionPerformed (ActionEvent e) {
+		RegistroInternacionalController.this.registroInternacionalView
+			.getMainFrame ().dispose ();
+	}	
     }
 }

@@ -65,6 +65,10 @@ public class RegistroInternacionalView {
         enviarBoton.addActionListener(listenForEnviarBoton);
     }
 
+    public void addCancelarBtn (ActionListener cancelarBotonListener) {
+	    this.cancelarBoton.addActionListener (cancelarBotonListener);
+    }
+
     public void mostrarError(String mensajeError){
         JOptionPane.showMessageDialog(mainFrame,mensajeError);
     }
