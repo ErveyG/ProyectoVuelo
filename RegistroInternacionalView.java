@@ -8,7 +8,7 @@ public class RegistroInternacionalView {
     PasajeroView pasajeroView = new PasajeroView();
     VueloView vueloView = new VueloView();
     JButton enviarBoton = new JButton("Enviar");
-    JButton cancelarBoton = new JButton("Cancelar Boleto");
+    JButton cancelarBoton = new JButton("Cancelar");
 
     public DocumentacionInternacionalView getDocInternacionalView() {
         return docInternacionalView;
