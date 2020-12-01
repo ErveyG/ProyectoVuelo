@@ -1,4 +1,6 @@
-public class Boleto {
+import java.io.Serializable;
+
+public class Boleto implements Serializable {
 	private Pasajero pasajero;
 	private Vuelo vuelo;
 	

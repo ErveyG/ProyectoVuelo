@@ -1,1 +1,3 @@
-public interface Documentacion {}
+import java.io.Serializable;
+
+public interface Documentacion extends Serializable {}

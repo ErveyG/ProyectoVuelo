@@ -1,4 +1,6 @@
-public class Pasajero {
+import java.io.Serializable;
+
+public class Pasajero implements Serializable {
 	private EnumClase clase;
 	private Documentacion documentacion;
 	private int edad;

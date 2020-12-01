@@ -1,4 +1,6 @@
-public class Vuelo {
+import java.io.Serializable;
+
+public class Vuelo implements Serializable {
 	private String aerolinea;
 	private String destino;
 	private int numAsiento;
