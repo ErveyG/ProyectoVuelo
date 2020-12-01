@@ -1,4 +1,6 @@
-public class Maleta {
+import java.io.Serializable;
+
+public class Maleta implements Serializable {
 	private double peso;
 
 	public Maleta(double peso) {
