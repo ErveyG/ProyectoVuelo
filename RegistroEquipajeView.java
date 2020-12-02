@@ -17,7 +17,7 @@ public class RegistroEquipajeView {
     private double[] pesoMaleta;
 
     public RegistroEquipajeView(int maletas){
-        maletaViews = new MaletaView[maletas++];
+        maletaViews = new MaletaView[maletas];
         pesoMaleta = new double[maletas];
         mainFrame = new JFrame();
 
@@ -41,6 +41,10 @@ public class RegistroEquipajeView {
                 botonAgregarMaletaActionPerformed(evt);
             }
         });
+
+	if (maletas == 1) {
+		botonAgregarMaleta.setEnabled (false);
+	}
 
         panelEast = new JPanel(new GridLayout(2,1));
         panelEast.add(panelNorthEast);
@@ -84,7 +88,11 @@ public class RegistroEquipajeView {
             constraints.gridx = 0;
             constraints.gridy = maletaCount;
 
-            panelNorthEast.add(maletaViews[maletaCount++] = new MaletaView(), constraints);
+	    if (maletaCount+2 == maletaViews.length) {
+		    RegistroEquipajeView.this.botonAgregarMaleta.setEnabled (false);
+	    }
+
+            panelNorthEast.add(maletaViews[++maletaCount] = new MaletaView(), constraints);
             panelNorthEast.revalidate();
             panelNorthEast.repaint();
         }
