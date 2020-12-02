@@ -23,7 +23,7 @@ public class RegistroEquipajeController {
                 for(int i = 0; i < pasajero.getEquipaje().length; i++){
                     maleta[i] = maletaController.creaMaleta(registroEquipajeView.getMaletaViews()[i].getPesoMaletaEntrada());
                     pasajero.documentarMaleta(maleta[i]);
-                    JOptionPane.showMessageDialog(null,maleta[0].toString());
+                    JOptionPane.showMessageDialog(null,maleta[i].toString());
                 }
            }
             catch (Exception e){
