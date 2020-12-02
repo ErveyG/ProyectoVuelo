@@ -127,7 +127,8 @@ public class MenuView extends JFrame {
     }
 
     private void cancelarBoletoMenuItemActionPerformed(java.awt.event.ActionEvent evt) {
-        JOptionPane.showMessageDialog(null,"Not available yet.");
+        CancelarView cancelarView = new CancelarView();
+        CancelarViewController cancelarViewController = new CancelarViewController(cancelarView);
     }
 
     private void registrarBoletoMenuActionPerformed(java.awt.event.ActionEvent evt) {
