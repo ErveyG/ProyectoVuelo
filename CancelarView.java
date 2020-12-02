@@ -21,7 +21,7 @@ public class CancelarView extends JFrame{
         contenedor.setVisible(true);
         contenedor.setSize(400,200);
         contenedor.setLayout(new GridBagLayout());
-        contenedor.setBackground(new Color(51,51,255));
+        contenedor.setBackground(Color.decode("#2299f0"));
 
         cancelarBoton.setSize(25,20);
         agregarComponente(contenedor,nombrePasajero,0,1);
