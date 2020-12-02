@@ -12,7 +12,6 @@ public class PasajeroView extends JPanel {
 	private JTextField sexoTextField = new JTextField(20);//cambiar a radioButton?
 	private JComboBox<String> claseVueloComboBox = new JComboBox<>();
 
-	//inicializo para ejemplificar
 	private EnumClase claseEntrada;
 	private int edadEntrada;
 	private String nombreEntrada;

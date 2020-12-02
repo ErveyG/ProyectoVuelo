@@ -18,7 +18,7 @@ public class RegistroNacionalController {
     public RegistroNacionalController(RegistroNacionalView registroNacionalView){
         this.registroNacionalView = registroNacionalView;
         this.registroNacionalView.addEnviarBoton(new EnviarListener());
-	this.registroNacionalView.addCancelarBtn (new CancelarBtnListener ());
+	    this.registroNacionalView.addCancelarBtn(new CancelarBtnListener ());
     }
 
     class EnviarListener implements ActionListener{

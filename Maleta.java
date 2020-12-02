@@ -2,6 +2,7 @@ import java.io.Serializable;
 
 public class Maleta implements Serializable {
 	private double peso;
+	//private double totalExcesoMaleta;
 
 	public Maleta(double peso) {
 		this.peso = peso;
@@ -17,6 +18,13 @@ public class Maleta implements Serializable {
 		double exceso = this.calcularExceso();
 		if (exceso <= 10) return exceso * 300;
 		return exceso * 500;
+	}
+
+	@Override
+	public String toString() {
+		return "Maleta{" +
+				"peso=" + peso +
+				'}';
 	}
 }
 

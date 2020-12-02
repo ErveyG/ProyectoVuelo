@@ -8,6 +8,8 @@ public class RegistroInternacionalController {
     private DocumentacionController documentacionController = new DocumentacionController();
     private PasajeroController pasajeroController = new PasajeroController();
     private MaletaController maletaController = new MaletaController();
+    private RegistroEquipajeView registroEquipajeView;
+    private RegistroEquipajeController registroEquipajeController;
 
     Vuelo vuelo;
     Documentacion documentacion;
@@ -41,6 +43,11 @@ public class RegistroInternacionalController {
 
                 boleto = new Boleto(pasajero,vuelo);
 
+                registroEquipajeView = new RegistroEquipajeView(pasajero.getEquipaje().length);
+                registroEquipajeController = new RegistroEquipajeController(pasajero.getEquipaje(),
+                                                                            pasajero,
+                                                                            registroEquipajeView);
+                registroInternacionalView.getMainFrame().dispose();
                 JOptionPane.showMessageDialog(null,boleto.toString());
 
             }

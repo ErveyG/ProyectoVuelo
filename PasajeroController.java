@@ -12,8 +12,4 @@ public class PasajeroController {
 				nombre,
 				sexo);
 	}
-
-	public void mostrarVista() throws Exception {
-		this.vista = new PasajeroView();
-	}
 }

@@ -1,3 +1,4 @@
+import javax.imageio.stream.ImageInputStream;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -11,10 +12,11 @@ public class MaletaView extends JPanel{
 	private double pesoMaletaEntrada = 0;
 
 	public double getPesoMaletaEntrada(){
-		return pesoMaletaEntrada;
+		return pesoMaletaEntrada = Integer.parseInt(pesoMaletaTextField.getText());
 	}
 	MaletaView(){
 		this.setLayout(new GridBagLayout());
+		this.setBackground(Color.decode("#2299f0"));
 
 		GridBagConstraints constraints = new GridBagConstraints();
 		constraints.insets = new Insets(10, 10, 10, 10);
