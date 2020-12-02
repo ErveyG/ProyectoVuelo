@@ -38,7 +38,4 @@ public class CancelarView extends JFrame{
         contrains.gridy = y;
         padre.add(hijo,contrains);
     }
-    public static void main(String[] args) {
-        CancelarView p1 = new CancelarView();
-    }
 }
