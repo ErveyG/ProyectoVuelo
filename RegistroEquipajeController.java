@@ -18,13 +18,20 @@ public class RegistroEquipajeController {
     }
 
     class EnviarListenerEquipaje implements ActionListener{
-        public void actionPerformed(ActionEvent event){
-          try{
-                for(int i = 0; i < pasajero.getEquipaje().length; i++){
-                    maleta[i] = maletaController.creaMaleta(registroEquipajeView.getMaletaViews()[i].getPesoMaletaEntrada());
-                    pasajero.documentarMaleta(maleta[i]);
-                    JOptionPane.showMessageDialog(null,maleta[0].toString());
-                }
+        public void actionPerformed (ActionEvent event) {
+          try {
+		for (MaletaView maletaView : 
+				  RegistroEquipajeController.this
+				  .registroEquipajeView.getMaletaViews ()) {
+			if (maletaView != null) {
+				Maleta maleta = RegistroEquipajeController.this.
+					maletaController.creaMaleta (
+							maletaView.getPesoMaletaEntrada ());
+				RegistroEquipajeController.this
+					.pasajero.documentarMaleta (maleta);
+				JOptionPane.showMessageDialog (null, maleta.toString ());
+			}
+		}
            }
             catch (Exception e){
                 System.out.println(e);
