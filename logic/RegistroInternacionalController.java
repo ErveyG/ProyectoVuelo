@@ -57,7 +57,8 @@ public class RegistroInternacionalController {
                 registroEquipajeView = new RegistroEquipajeView(pasajero.getEquipaje().length);
                 registroEquipajeController = new RegistroEquipajeController(pasajero.getEquipaje(),
                         pasajero,
-                        registroEquipajeView);
+                        registroEquipajeView,
+                        boleto);
                 registroInternacionalView.getMainFrame().dispose();
                 JOptionPane.showMessageDialog(null, boleto.toString());
 
@@ -80,3 +81,4 @@ public class RegistroInternacionalController {
         }
     }
 }
+
