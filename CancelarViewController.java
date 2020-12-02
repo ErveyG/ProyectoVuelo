@@ -3,6 +3,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+//Clase controladora de la accion cancelar boleto
 public class CancelarViewController implements ActionListener {
     BoletoDao b1 = new BoletoDao();
     private CancelarView vista;
@@ -10,6 +11,8 @@ public class CancelarViewController implements ActionListener {
         this.vista = vistaCancelar;
         eventos();
     }
+
+    //Agrega el escuchador al boton
     public void eventos(){
         vista.cancelarBoton.addActionListener(this);
     }
