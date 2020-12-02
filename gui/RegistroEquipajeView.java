@@ -111,7 +111,4 @@ public class RegistroEquipajeView {
         JOptionPane.showMessageDialog(mainFrame, mensajeError);
     }
 
-    public static void main(String[] args) {
-        RegistroEquipajeView view = new RegistroEquipajeView(3);
-    }
 }
