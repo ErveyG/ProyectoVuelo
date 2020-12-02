@@ -8,6 +8,8 @@ public class RegistroNacionalController {
     private DocumentacionController documentacionController = new DocumentacionController();
     private PasajeroController pasajeroController = new PasajeroController();
     private MaletaController maletaController = new MaletaController();
+    private RegistroEquipajeView registroEquipajeView;
+    private RegistroEquipajeController registroEquipajeController;
 
     Vuelo vuelo;
     Documentacion documentacion;
@@ -40,6 +42,13 @@ public class RegistroNacionalController {
                                                             registroNacionalView.getPasajeroView().getSexoEntrada());
 
                 boleto = new Boleto(pasajero,vuelo);
+
+                registroEquipajeView = new RegistroEquipajeView(pasajero.getEquipaje().length);
+                registroEquipajeController = new RegistroEquipajeController(pasajero.getEquipaje(),
+                        pasajero,
+                        registroEquipajeView,
+                        boleto);
+                registroNacionalView.getMainFrame().dispose();
 
                 JOptionPane.showMessageDialog(null,boleto.toString());
                 //crear una excepcion para boton Cancelar boleto

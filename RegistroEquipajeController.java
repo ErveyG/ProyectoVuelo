@@ -8,12 +8,15 @@ public class RegistroEquipajeController {
     private MaletaController maletaController;
     private Maleta[] maleta;
     private Pasajero pasajero;
+    private Boleto boleto;
 
-    public RegistroEquipajeController(Maleta[] maleta,Pasajero pasajero,RegistroEquipajeView registroEquipajeView){
+    public RegistroEquipajeController(Maleta[] maleta,Pasajero pasajero,
+                                      RegistroEquipajeView registroEquipajeView,Boleto boleto){
         this.maleta = maleta;
         this.pasajero = pasajero;
         maletaController = new MaletaController();
         this.registroEquipajeView =  registroEquipajeView;
+        this.boleto = boleto;
         this.registroEquipajeView.addEnviarBoton(new EnviarListenerEquipaje());
     }
 
@@ -29,8 +32,18 @@ public class RegistroEquipajeController {
 							maletaView.getPesoMaletaEntrada ());
 				RegistroEquipajeController.this
 					.pasajero.documentarMaleta (maleta);
-				JOptionPane.showMessageDialog (null, maleta.toString ());
+				//JOptionPane.showMessageDialog (null, maleta.toString ());//para comprobar
 			}
+
+			try{
+			    BoletoDao boletoDao = new BoletoDao();
+			    boletoDao.guardar(boleto);
+            }
+			catch (IOException e){
+                registroEquipajeView.mostrarError("¡Error! ¡No se ha podido guardar su boleto!");
+            }
+
+			registroEquipajeView.getMainFrame().dispose();
 		}
            }
             catch (Exception e){
