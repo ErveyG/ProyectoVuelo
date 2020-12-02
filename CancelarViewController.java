@@ -1,31 +1,30 @@
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
 
 public class CancelarViewController implements ActionListener {
-    File archivoEliminar;
+    BoletoDao b1 = new BoletoDao();
     private CancelarView vista;
     public CancelarViewController(CancelarView vistaCancelar){
         this.vista = vistaCancelar;
         eventos();
     }
     public void eventos(){
-        vista.buscarBoton.addActionListener(this);
+        vista.cancelarBoton.addActionListener(this);
     }
 
     @Override
     public void actionPerformed(ActionEvent e){
         Object evt = e.getSource();
-        if(evt.equals(vista.buscarBoton)){
-            String nombre = vista.tipoPasajeroComboBox.getSelectedItem().toString()+"_"+vista.textoArchivo.getText().replace(" ","")+".vuelo";
-            archivoEliminar = new File(nombre);
-            if (archivoEliminar.delete()){
-                JOptionPane.showMessageDialog(null,"El boleto fue cancelado exitosamente");
+        if(evt.equals(vista.cancelarBoton)){
+            try {
+                b1.eliminar(vista.nombrePas.getText(), EnumVuelo.valueOf(vista.tipoPasajeroComboBox.getSelectedItem().toString()));
+                JOptionPane.showMessageDialog(null,"Boleto Cancelado");
                 vista.dispose();
+            }catch (Exception a){
+                JOptionPane.showMessageDialog(null,"Ha ocurrido un error!!!");
             }
-            else
-                JOptionPane.showMessageDialog(null,"No se encontro el boleto");
         }
     }
 }
